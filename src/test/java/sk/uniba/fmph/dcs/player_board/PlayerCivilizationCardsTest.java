@@ -3,16 +3,16 @@ package sk.uniba.fmph.dcs.player_board;
 import org.junit.Test;
 import sk.uniba.fmph.dcs.stone_age.EndOfGameEffect;
 
-public class PlayerCivilisationCardsTest {
+public class PlayerCivilizationCardsTest {
     @Test
     public void test_init() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
         assert (pc.state().isEmpty());
     }
 
     @Test
     public void test_farmerEffect() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
 
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 0, 1, 0) == 0);
         assert (pc.calculateEndOfGameCivilisationCardsPoints(1, 1, 0, 1) == 0);
@@ -34,7 +34,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_toolMakerEffect() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
 
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 1, 0, 0) == 0);
         assert (pc.calculateEndOfGameCivilisationCardsPoints(1, 0, 1, 1) == 0);
@@ -56,7 +56,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_builderEffect() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
 
         assert (pc.calculateEndOfGameCivilisationCardsPoints(1, 0, 0, 0) == 0);
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 1, 1, 1) == 0);
@@ -78,7 +78,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_shamanEffect() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
 
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 0, 0, 1) == 0);
         assert (pc.calculateEndOfGameCivilisationCardsPoints(1, 1, 1, 0) == 0);
@@ -100,7 +100,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_sandBackgroundCards() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
         pc.addEndOfGameEffects(new EndOfGameEffect[] { EndOfGameEffect.BUILDER, EndOfGameEffect.TOOL_MAKER,
                 EndOfGameEffect.TOOL_MAKER, EndOfGameEffect.FARMER, EndOfGameEffect.FARMER, EndOfGameEffect.FARMER,
                 EndOfGameEffect.SHAMAN, EndOfGameEffect.SHAMAN, EndOfGameEffect.SHAMAN, EndOfGameEffect.SHAMAN });
@@ -116,7 +116,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_grassBackgroundCards1() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 0, 0, 0) == 0);
         pc.addEndOfGameEffects(new EndOfGameEffect[] { EndOfGameEffect.MEDICINE });
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 0, 0, 0) == 1);
@@ -138,7 +138,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_grassBackgroundCards2() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
         pc.addEndOfGameEffects(new EndOfGameEffect[] { EndOfGameEffect.WEAVING, EndOfGameEffect.ART,
                 EndOfGameEffect.MEDICINE, EndOfGameEffect.MUSIC });
         assert (pc.calculateEndOfGameCivilisationCardsPoints(0, 0, 0, 0) == 16);
@@ -158,7 +158,7 @@ public class PlayerCivilisationCardsTest {
 
     @Test
     public void test_addEndOfGameEffects() {
-        PlayerCivilisationCards pc = new PlayerCivilisationCards();
+        PlayerCivilizationCards pc = new PlayerCivilizationCards();
         pc.addEndOfGameEffects(new EndOfGameEffect[] { EndOfGameEffect.WEAVING, EndOfGameEffect.ART,
                 EndOfGameEffect.MEDICINE, EndOfGameEffect.MUSIC });
         pc.addEndOfGameEffects(new EndOfGameEffect[] { EndOfGameEffect.WEAVING, EndOfGameEffect.ART,

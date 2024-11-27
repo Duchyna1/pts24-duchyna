@@ -11,8 +11,6 @@ import static org.junit.Assert.assertEquals;
 public class VariableBuildingTest {
     @Test
     public void test_calculation() {
-        // todo toto by mal spravit niekto iny ako ja zrejme
-
         VariableBuilding building = new VariableBuilding(4, 2);
 
         ArrayList<Effect> wrongResources = new ArrayList<Effect>();

@@ -3,7 +3,6 @@ package sk.uniba.fmph.dcs.player_board;
 import org.junit.Test;
 import sk.uniba.fmph.dcs.stone_age.Effect;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -13,7 +12,7 @@ public class PlayerBoardGameBoardFacadeTest {
         PlayerResourcesAndFood prf = new PlayerResourcesAndFood(0);
         PlayerFigures pf = new PlayerFigures();
         TribeFedStatus tfs = new TribeFedStatus(prf, pf);
-        PlayerBoard pb = new PlayerBoard(new PlayerCivilisationCards(), pf, prf, new PlayerTools(), tfs);
+        PlayerBoard pb = new PlayerBoard(new PlayerCivilizationCards(), pf, prf, new PlayerTools(), tfs);
         PlayerBoardGameBoardFacade PBGBF = new PlayerBoardGameBoardFacade(pb);
         pb.getPlayerResourcesAndFood()
                 .giveResources(new Effect[] { Effect.FOOD, Effect.FOOD, Effect.FOOD, Effect.FOOD, Effect.FOOD });

@@ -10,7 +10,7 @@ public class PlayerBoardTest {
         PlayerResourcesAndFood prf = new PlayerResourcesAndFood(0);
         PlayerFigures pf = new PlayerFigures();
         TribeFedStatus tfs = new TribeFedStatus(prf, pf);
-        PlayerBoard pb = new PlayerBoard(new PlayerCivilisationCards(), pf, prf, new PlayerTools(), tfs);
+        PlayerBoard pb = new PlayerBoard(new PlayerCivilizationCards(), pf, prf, new PlayerTools(), tfs);
         pb.getPlayerFigures().addNewFigure();
         pb.getTribeFedStatus().addField();
         pb.getPlayerTools().addTool();
@@ -67,7 +67,7 @@ public class PlayerBoardTest {
             pb.getTribeFedStatus().addField();
             pb.newTurn();
         } // 4 fields
-      
+
         pb.addHouse();
         pb.addHouse(); // 2 houses
         pb.getPlayerResourcesAndFood()

@@ -4,14 +4,14 @@ import sk.uniba.fmph.dcs.stone_age.Effect;
 
 import java.util.Arrays;
 
-public final class GetSomethingThrow implements EvaluateCivilisationCardImmediateEffect {
+public final class GetSomethingThrow implements EvaluateCivilizationCardImmediateEffect {
     private final Effect resource;
     private final CurrentThrow currentThrow;
 
     public GetSomethingThrow(final Effect resource) {
         this.resource = resource;
 
-        int something = 0; // todo
+        int something = 0;
         currentThrow = new CurrentThrow(resource, something);
     }
 
@@ -21,7 +21,7 @@ public final class GetSomethingThrow implements EvaluateCivilisationCardImmediat
             return false;
         }
         currentThrow.initiate(player, choice, 2);
-        int pocet = 0; // todo
+        int pocet = 0;
         Effect[] res = new Effect[pocet];
         Arrays.fill(res, choice);
         player.playerBoard().giveEffect(res);

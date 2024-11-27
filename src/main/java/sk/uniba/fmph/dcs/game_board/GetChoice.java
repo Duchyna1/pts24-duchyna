@@ -2,7 +2,7 @@ package sk.uniba.fmph.dcs.game_board;
 
 import sk.uniba.fmph.dcs.stone_age.Effect;
 
-public class GetChoice implements EvaluateCivilisationCardImmediateEffect {
+public class GetChoice implements EvaluateCivilizationCardImmediateEffect {
     private int numberOfResources;
 
     /**

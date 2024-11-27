@@ -5,12 +5,12 @@ import java.util.Collection;
 public interface InterfaceStoneAgeGame {
     boolean placeFigures(int playerId, Location location, int figuresCount);
 
-    boolean makeAction(int playerId, Location location, Collection<Effect> usedResources, Collection<Effect> desiredResources);
+    boolean makeAction(int playerId, Location location, Collection<Effect> usedResources,
+            Collection<Effect> desiredResources);
 
-    boolean skipAction(int playerId, Location location); // : bool (only if resources are required) todo neviem co to
-    // znamena
+    boolean skipAction(int playerId, Location location); // : bool (only if resources are required)
 
-    boolean useTools(int playerId, int toolIndex); // : bool {affects last action} todo neviem co to znamena
+    boolean useTools(int playerId, int toolIndex); // : bool {affects last action}
 
     boolean noMoreToolsThisThrow(int playerId);
 

@@ -5,7 +5,7 @@ import sk.uniba.fmph.dcs.stone_age.Effect;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetSomethingFixed implements EvaluateCivilisationCardImmediateEffect {
+public class GetSomethingFixed implements EvaluateCivilizationCardImmediateEffect {
     private final List<Effect> effects;
 
     /**

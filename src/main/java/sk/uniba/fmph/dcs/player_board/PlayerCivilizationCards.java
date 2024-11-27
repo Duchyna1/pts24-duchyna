@@ -5,7 +5,7 @@ import sk.uniba.fmph.dcs.stone_age.EndOfGameEffect;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PlayerCivilisationCards {
+public class PlayerCivilizationCards {
 
     private Map<EndOfGameEffect, Integer> endOfGameEffects;
     private final EndOfGameEffect[] greenBackGround = {EndOfGameEffect.MEDICINE, EndOfGameEffect.ART,
@@ -15,7 +15,7 @@ public class PlayerCivilisationCards {
     /**
      * Initialization.
      */
-    public PlayerCivilisationCards() {
+    public PlayerCivilizationCards() {
         endOfGameEffects = new HashMap<>();
         for (EndOfGameEffect effect : EndOfGameEffect.values()) {
             endOfGameEffects.put(effect, 0);

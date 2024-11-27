@@ -6,7 +6,7 @@ import sk.uniba.fmph.dcs.stone_age.InterfaceGamePhaseController;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllPlayersTakeReward implements EvaluateCivilisationCardImmediateEffect {
+public class AllPlayersTakeReward implements EvaluateCivilizationCardImmediateEffect {
 
     private final RewardMenu menu;
     private static final int WOODID = 1;

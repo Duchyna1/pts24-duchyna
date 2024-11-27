@@ -61,9 +61,9 @@ public class PlaceOnHutAdaptor implements InterfaceFigureLocationInternal {
      * @param player
      *            player that wants to resolve
      * @param inputResources
-     *            really don't know todo
+     *            really don't know
      * @param outputResources
-     *            don't know either todo
+     *            don't know either
      *
      * @return ACTION_DONE when player can resolve huts, FAILURE otherwise
      */
@@ -76,7 +76,6 @@ public class PlaceOnHutAdaptor implements InterfaceFigureLocationInternal {
             return ActionResult.FAILURE;
         }
     }
-    // todo
 
     /**
      * does exactly nothing.
@@ -91,8 +90,6 @@ public class PlaceOnHutAdaptor implements InterfaceFigureLocationInternal {
         return false;
     }
 
-    // todo
-
     /**
      * does exactly nothing.
      *
@@ -105,8 +102,6 @@ public class PlaceOnHutAdaptor implements InterfaceFigureLocationInternal {
     public HasAction tryToMakeAction(final Player player) {
         return null;
     }
-
-    // todo
 
     /**
      * does exactly nothing.
