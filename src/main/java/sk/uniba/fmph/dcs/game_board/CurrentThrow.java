@@ -2,11 +2,9 @@ package sk.uniba.fmph.dcs.game_board;
 
 import sk.uniba.fmph.dcs.stone_age.Effect;
 import sk.uniba.fmph.dcs.stone_age.InterfaceToolUse;
-import sk.uniba.fmph.dcs.stone_age.PlayerOrder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,10 +14,10 @@ public final class CurrentThrow implements InterfaceToolUse {
     private Player player;
     private boolean finished;
 
-    private final int WOOD_CONSTANT = 3;
-    private final int CLAY_CONSTANT = 4;
-    private final int STONE_CONSTANT = 5;
-    private final int GOLD_CONSTANT = 6;
+    private static final int WOOD_CONSTANT = 3;
+    private static final int CLAY_CONSTANT = 4;
+    private static final int STONE_CONSTANT = 5;
+    private static final int GOLD_CONSTANT = 6;
 
     /**
      * @param player
