@@ -80,28 +80,28 @@ public final class CurrentThrow implements InterfaceToolUse {
 
         List<Effect> toAdd = new ArrayList<>();
         switch (this.throwsFor) {
-            case Effect.WOOD:
-                for (int i = 0; i < this.throwResult/WOOD_CONSTANT; i++) {
-                    toAdd.add(Effect.WOOD);
-                }
-                break;
-            case Effect.CLAY:
-                for (int i = 0; i < this.throwResult/CLAY_CONSTANT; i++) {
-                    toAdd.add(Effect.CLAY);
-                }
-                break;
-            case Effect.STONE:
-                for (int i = 0; i < this.throwResult/STONE_CONSTANT; i++) {
-                    toAdd.add(Effect.STONE);
-                }
-                break;
-            case Effect.GOLD:
-                for (int i = 0; i < this.throwResult/GOLD_CONSTANT; i++) {
-                    toAdd.add(Effect.GOLD);
-                }
-                break;
-            default:
-                return false;
+        case Effect.WOOD:
+            for (int i = 0; i < this.throwResult / WOOD_CONSTANT; i++) {
+                toAdd.add(Effect.WOOD);
+            }
+            break;
+        case Effect.CLAY:
+            for (int i = 0; i < this.throwResult / CLAY_CONSTANT; i++) {
+                toAdd.add(Effect.CLAY);
+            }
+            break;
+        case Effect.STONE:
+            for (int i = 0; i < this.throwResult / STONE_CONSTANT; i++) {
+                toAdd.add(Effect.STONE);
+            }
+            break;
+        case Effect.GOLD:
+            for (int i = 0; i < this.throwResult / GOLD_CONSTANT; i++) {
+                toAdd.add(Effect.GOLD);
+            }
+            break;
+        default:
+            return false;
         }
 
         this.player.playerBoard().giveEffect(toAdd.toArray(new Effect[0]));
