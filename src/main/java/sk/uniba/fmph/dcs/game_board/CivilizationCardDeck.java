@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.Stack;
 
 public final class CivilizationCardDeck {
-    private Stack<CivilizationCard> deck;
+    private final Stack<CivilizationCard> deck;
 
     public CivilizationCardDeck(final CivilizationCard[] cards) {
         this.deck = new Stack<>();
