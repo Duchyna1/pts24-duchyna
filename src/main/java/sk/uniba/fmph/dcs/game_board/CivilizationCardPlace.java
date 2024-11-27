@@ -129,7 +129,10 @@ public class CivilizationCardPlace implements InterfaceFigureLocationInternal {
             return ActionResult.FAILURE;
         }
 
-        player.playerBoard().takeResources(inputResources);
+        if (!player.playerBoard().takeResources(inputResources)) {
+            return ActionResult.FAILURE;
+        }
+
         this.figures.remove(player.playerOrder());
         return ActionResult.ACTION_DONE;
     }
