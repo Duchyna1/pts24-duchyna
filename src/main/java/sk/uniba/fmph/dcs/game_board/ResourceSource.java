@@ -25,6 +25,8 @@ public class ResourceSource implements InterfaceFigureLocationInternal {
     private static final int NUMBER_OF_TOOLS = 6;
 
     public ResourceSource(final Effect resource, final int count) {
+        this.figures = new ArrayList<>();
+
         this.currentThrow = null;
         this.currentPlayer = null;
 
@@ -154,7 +156,7 @@ public class ResourceSource implements InterfaceFigureLocationInternal {
         if (outputResources.length != 0) {
             return ActionResult.FAILURE;
         }
-        if (player != this.currentPlayer) {
+        if (this.currentPlayer != null && player != this.currentPlayer) {
             return ActionResult.FAILURE;
         }
 
