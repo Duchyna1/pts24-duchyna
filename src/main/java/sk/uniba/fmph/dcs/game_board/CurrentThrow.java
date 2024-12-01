@@ -107,4 +107,24 @@ public final class CurrentThrow implements InterfaceToolUse {
         this.finished = true;
         return true;
     }
+
+    /**
+     * Gets the number of resources obtained from the throw.
+     *
+     * @return The number of resources based on throwResult divided by resource constant
+     */
+    public int getResult() {
+        switch (this.throwsFor) {
+        case WOOD:
+            return this.throwResult / WOOD_CONSTANT;
+        case CLAY:
+            return this.throwResult / CLAY_CONSTANT;
+        case STONE:
+            return this.throwResult / STONE_CONSTANT;
+        case GOLD:
+            return this.throwResult / GOLD_CONSTANT;
+        default:
+            return 0;
+        }
+    }
 }

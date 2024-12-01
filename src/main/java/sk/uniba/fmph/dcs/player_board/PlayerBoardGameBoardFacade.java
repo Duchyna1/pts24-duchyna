@@ -192,4 +192,13 @@ public final class PlayerBoardGameBoardFacade
         }
         return Optional.of(value);
     }
+
+    /**
+     * Just for testing.
+     *
+     * @return player PlayerResourcesAndFood
+     */
+    public PlayerResourcesAndFood getPlayerResourcesAndFood() {
+        return this.playerBoard.getPlayerResourcesAndFood();
+    }
 }
