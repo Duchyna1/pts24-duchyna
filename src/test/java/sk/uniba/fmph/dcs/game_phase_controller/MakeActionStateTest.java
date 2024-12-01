@@ -33,6 +33,7 @@ public class MakeActionStateTest {
                 List.of(Effect.STONE));
 
         assertEquals(ActionResult.ACTION_DONE, result);
+        assertNull(places.get(Location.TOOL_MAKER));
     }
 
     @Test
@@ -61,6 +62,20 @@ public class MakeActionStateTest {
         HasAction result = makeActionState.tryToMakeAutomaticAction(player);
 
         assertEquals(HasAction.NO_ACTION_POSSIBLE, result);
+    }
+
+    @Test
+    public void testTryToMakeAutomaticActionAutomaticActionDone() {
+        InterfaceFigureLocation figureLocationMock = mock(InterfaceFigureLocation.class);
+        when(figureLocationMock.tryToMakeAction(player)).thenReturn(HasAction.WAITING_FOR_PLAYER_ACTION);
+        when(figureLocationMock.makeAction(player, null, null)).thenReturn(ActionResult.ACTION_DONE);
+
+        places.put(Location.TOOL_MAKER, figureLocationMock);
+
+        HasAction result = makeActionState.tryToMakeAutomaticAction(player);
+
+        assertEquals(HasAction.AUTOMATIC_ACTION_DONE, result);
+        assertNull(places.get(Location.TOOL_MAKER));
     }
 
     @Test
