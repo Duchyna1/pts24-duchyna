@@ -31,7 +31,7 @@ public class CivilizationCardPlace implements InterfaceFigureLocationInternal {
      * @return new civilization card in this place
      */
     public Optional<CivilizationCard> next() {
-        if (this.card.isPresent()) {
+        if (this.card != null && this.card.isPresent()) {
             return this.card;
         }
 
@@ -55,6 +55,10 @@ public class CivilizationCardPlace implements InterfaceFigureLocationInternal {
      */
     @Override
     public boolean placeFigures(final Player player, final int figureCount) {
+        if (this.figures.size() == 1) {
+            return false;
+        }
+
         if (figureCount != 1) {
             return false;
         }
